@@ -11,7 +11,7 @@ include 'displayFunctions.php';
 //tapeDansLesMains(20);
 
 $eleves = getEleves();
-niceDump($_GET); 
+//niceDump($_GET); 
 // parametres de requetes get sont stockés dans  superglobal $_GET;
 // SG : disponible partout, se comporte comme un array, est remplie/Définie par PHP.
 
