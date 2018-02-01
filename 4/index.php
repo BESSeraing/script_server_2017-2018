@@ -16,8 +16,6 @@ else{
     displayForm();
 }
 
-
-
 function isFormSubmitted(){
     return count($_POST);
 }
@@ -38,9 +36,6 @@ function isUserLogged(){
     
     return false;
 }
-
-
-
 
 function sessionExists(){
    return isset($_SESSION['token']);
