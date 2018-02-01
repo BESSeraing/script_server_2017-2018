@@ -16,9 +16,9 @@ if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] == 0){
     if ($_FILES['avatar']['size'] <= $maxFileSize){
         $pathInfo = pathinfo($_FILES['avatar']['name']);
 //        print_r($pathInfo);
-        print_r($_FILES['avatar']);
+//        print_r(mime_content_type($_FILES['avatar']['tmp_name']));
         $extension = $pathInfo['extension'];
-        if (array_key_exists($extension,$allowedExtensions) && $_FILES['avatar']['type'] == $allowedExtensions[$extension]){
+        if (array_key_exists($extension,$allowedExtensions) && mime_content_type($_FILES['avatar']['tmp_name']) == $allowedExtensions[$extension]){
             //On peut uploader
             $uploadedFilePath = './images/'.time().'.'.$extension;
             move_uploaded_file($_FILES['avatar']['tmp_name'],$uploadedFilePath);
