@@ -6,13 +6,13 @@ $scores=[
     ['player'=>"Gasparino","score"=>1000],
     ['player'=>"Cédric","score"=>2000]//....
 ];
-
-$score= ["player"=>null,"score"=>null];
-
-if (isset($_POST["player"])){
-    $score["player"] = filter_input(INPUT_POST,"player");
-}
 if (isset($_POST["score"])){
+
+    $score= ["player"=>null,"score"=>null];
+
+    if (isset($_POST["player"])){
+        $score["player"] = filter_input(INPUT_POST,"player");
+    }
     $score["score"] = filter_input(INPUT_POST,"score");
 }
 
