@@ -16,21 +16,24 @@ $pageUrl = 'home';
 if (isset($_GET['page'])){
     $pageUrl = $_GET['page'];
 }
-$page = findPage($menu,$pageUrl);
-if ($page !== null){
-    echo '<h1>'.$page['name'].'</h1>';
-    echo '<p>'.$page['content'].'</p>';
+
+// --> https://media1.tenor.com/images/9edb3d1be26f97abdbff5110b8695aba/tenor.gif?itemid=5191901
+$page = array_values(
+            array_filter( 
+                $menu,
+                function($menuElement) use ($pageUrl) {
+                    return $menuElement['url'] == $pageUrl;
+                }
+                )
+            );
+//Cette façon est juste pour rire. La première version est plus lisible.
+if (count($page)){
+    echo '<h1>'.$page[0]['name'].'</h1>';
+    echo '<p>'.$page[0]['content'].'</p>';
 }
 
 
-function findPage($menu,$url){
-    foreach ($menu as $menuElement){
-        if ($menuElement['url'] === $url){
-            return $menuElement;
-        }
-    }
-    return null;
-}
+
 
 
 
