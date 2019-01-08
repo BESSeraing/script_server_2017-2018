@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="script_server_18_19@127.0.0.1">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="script_server_18_19">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="main-db"/>
+    <schema id="5" parent="1" name="master-data_junit"/>
+    <schema id="6" parent="1" name="meeting_cofinimmo"/>
+    <schema id="7" parent="1" name="meeting_jhipster_admin"/>
+    <schema id="8" parent="1" name="meeting_jhipster_user"/>
+    <schema id="9" parent="1" name="meeting_junit"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="poo"/>
+    <schema id="13" parent="1" name="symfony18-19"/>
+    <schema id="14" parent="1" name="uaa"/>
+    <schema id="15" parent="1" name="uaa_junit"/>
+    <schema id="16" parent="1" name="unittestdemo"/>
+    <schema id="17" parent="1" name="unittestdemo_test"/>
+    <table id="18" parent="2" name="jeux_video"/>
+    <table id="19" parent="2" name="student"/>
+    <column id="20" parent="18" name="ID">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="18" name="nom">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="18" name="possesseur">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="18" name="console">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="18" name="prix">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="25" parent="18" name="nbre_joueurs_max">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="26" parent="18" name="commentaires">
+      <Position>7</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="27" parent="18" name="ID">
+      <ColNames>ID</ColNames>
+    </index>
+    <column id="28" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="19" name="last_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="19" name="first_name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="19" name="email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <key id="32" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
