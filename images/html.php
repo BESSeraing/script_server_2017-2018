@@ -1,0 +1,1 @@
+<img src="index.php" alt=" Smile dog">
